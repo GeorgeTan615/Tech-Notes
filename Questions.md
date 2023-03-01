@@ -1,0 +1,323 @@
+### Linked-Lists
+- [x] [Merge Two Sorted List](https://leetcode.com/problems/merge-two-sorted-lists/)
+	- use curr and alt pointer, to either switch or advance curr pointer
+- [x] [Merge k Sorted List](https://leetcode.com/problems/merge-k-sorted-lists/)
+- [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+- [x] [Remove Nth Node from Linked List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+	- create a gap of length N with two pointers first
+- [x] [Reorder List](https://leetcode.com/problems/reorder-list/)
+- [x] [Reverse Linked List 2](https://leetcode.com/problems/reverse-linked-list-ii/)
+- [x] [Rotate List](https://leetcode.com/problems/rotate-list/)
+- [x] [Add 2 List](https://leetcode.com/problems/add-two-numbers-ii/)
+	- Bryan's Method {res = res x 10 + val}
+- [x] [Sort List](https://leetcode.com/problems/sort-list/)
+	- split list using slow fast pointers.
+- [x] [Swap Node in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+	- Could have just changed the payload value instead of dealing with the pointers
+- [x] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+	- Floyd's tortoise and hare
+- [x] [Swapping Nodes](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)
+	- Create a gap of length N with 2 pointers first
+- [x] [Reverse Nodes in k-group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+- [x] [Copy List with Constant Space](https://leetcode.com/problems/copy-list-with-random-pointer/discuss/43491)
+	- interweave node' for each node in original list
+---
+### Binary Tree
+- [x] [Same Tree](https://leetcode.com/problems/same-tree/ "https://leetcode.com/problems/same-tree/")
+- [x] [Iterative Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+	- Use stack that pops an item and checks if its visited, if not then put back in stack and mark as visited.
+- [x] [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+	- Sub problem - check if (left's right is symmetric to right's left) and (right's left symmetric to left's right)
+	- 2 stacks for iterative
+- [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+- [x] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+	- Put upper limit and lower limit in recursive payload
+- [x] [Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+	- keep track of depth and index depth
+	- use list to store each level
+- [x] [Binary Tree ZigZag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+- [x] [Binary Tree Right-side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+	- Did not take into account case where right tree shorter than left tree
+- [x] [Lowest Common Ancestor](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+	- Only the lowest common ancestor would have both p & q in different subtrees (except when lca is p or q, then mid will be mark along of one of left and right)
+- [x] [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+	- Only the lca will have both p & q in different subtree (is lca when node.val is middle of p and q)
+- [x] [Populating Next Right Pointers](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+	- iterative constant space.
+	- Dont need queue because binary tree is perfect
+	- curr assume it is already connected to nodes in the same level and is responsible for connecting all the nodes in the level below
+- [ ] [Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)
+	- left depends on curr and curr depends on right
+	- if no right subtree, then curr should add parent directly
+	- else curr should recurse the right subtree and since the right subtree would be correct already, curr should add x where x is (right->left->left->...->x->None)
+- [x] [Binary Tree from Preorder and Postorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
+	- Pop from preorder or postorder, then find seperator to divide left and right subtree
+- [x] [Binary Tree from Inorder and Postorder](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+- [x] [Binary Tree from Preorder and Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+- [ ] [Vertical Order Traversal](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
+	- Coordinates let x be column y be row.
+	- map coordinate to list of value
+	- sort coordinates in map and append to output list
+- [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+	- inorder traversal with x when reach leaf
+	- join with terminal char and split with terminal char
+- [x] [Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+	- either continue forward (single) or stop (double)
+	- for (single) can either left+self, right+self or self
+	- however for the stopped path (double), can be anything in single, both lsingle and rsingle and self, left's max double, right's max double
+---
+### Graph Flood
+- [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+	- simple dfs to flood when an island is identified
+- [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+	- simple dfs but keep track of max and cannot use accumulator to keep track of area if recursive (will miss some area if branch).
+- [x] [Word Search](https://leetcode.com/problems/word-search/)
+	- terminate early by counting char in board vs char in word
+	- can start at either end, but starting where there is a lower count of that char in the board is better
+- [x] [Palindromic Substring](https://leetcode.com/problems/palindromic-substrings/)
+	- flood character by character where the ith character is either the middle character (if odd length) of the palindrome or the [len(s) // 2]th character of the palindrome
+- [x] [Shortest Path in Grid](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/)
+	- simple BFS
+- [x] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/submissions/)
+	- flood from ocean uphill is way easier
+- [x] [Reconstruct Itenary](https://leetcode.com/problems/reconstruct-itinerary/)
+---
+### Backtracking
+- [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+	- keep track of left count and right count while backtracking and choosing to add "(" or ")" according to the counts
+- [x] [N Queens](https://leetcode.com/problems/n-queens/)
+- [x] [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+- [ ] [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/)
+	- backtracking by appending 0 - 9 at the end of each x, "appending" as in x * 10 + i
+- [x] [Combination Sum](https://leetcode.com/problems/combination-sum/)
+	- backtracking
+- [x] [Generate Permutation](https://leetcode.com/problems/permutations/)
+- [x] [Generate Subsets](https://leetcode.com/problems/subsets/)
+- [ ] [Frog Jump](https://leetcode.com/problems/frog-jump/)
+	- breadth first search
+- [x] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+	- double backtracking
+- [x] [Regex Matching](https://leetcode.com/problems/regular-expression-matching/)
+	- backtracking, check if j+2 got \*
+	- with memoisation
+- [ ] [Interleaving String](https://leetcode.com/problems/interleaving-string/ "https://leetcode.com/problems/interleaving-string/")
+- [x] [Stone Game](https://leetcode.com/problems/stone-game/)
+	- backtracking with memoisation
+- [x] [Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
+	- backtracking with memo
+	- but need to deduct points when player 2's turn
+	- also need to make sure that player 2 makes their optimal choice by ensuring that player 2 chooses the minimum of the score
+- [x] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
+	- dfs with memo
+- [ ] [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+	- create k buckets
+	- try each number at all positions in the bucket
+- [ ]  [24 Game](https://leetcode.com/problems/24-game/)
+---
+### Binary Search
+- [ ] [First Bad Version](https://leetcode.com/problems/first-bad-version/)
+- [x] [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
+- [ ] [Closest Subsequence Sum](https://leetcode.com/problems/closest-subsequence-sum/)
+	- meet in the middle & binary search
+- [ ] [K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
+	- range binary search
+	- cannot use abs because of case [1,1,2,2,2,2,2,3,3], x - arr[mid] > arr[mid+k] - x
+- [x] [First and Last Position in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [x] [Rotated Sorted Array Search](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+	- check if mid is in left sorted portion or right sorted portion, or perfectly sorted
+---
+### Sorting
+- [ ] [Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
+	- counting sort
+- [x] [Kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [x] [Top K Frequent Element](https://leetcode.com/problems/top-k-frequent-elements/)
+	- if quick select index is inclusive, inner loop must be in range(start+1, end **+1**)
+	- take care of the comparison more than or less than
+- [x] [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+	- Selective sorting, if mark < k then sort both sides, if <= k then only sort left 
+- [x] [Sort Colors](https://leetcode.com/problems/sort-colors/)
+---
+### Array
+- [x] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+	- sliding window classic
+- [x] [Two Sum](https://leetcode.com/problems/two-sum/)
+- [x] [Two Sum Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- [x] [3 Sum](https://leetcode.com/problems/3sum/)
+	- Best case is O(n^2).
+	- avoid duplicates by shifting *a* pointer until it is different from prev num
+	- avoid duplicates by shifting left pointer after match until it is different from prev left_num
+- [ ] [Binary String Prefix Alignment](https://leetcode.com/problems/number-of-times-binary-string-is-prefix-aligned/)
+	- number of lit bulbs
+	- keep track of number of bulbs lit vs upper limit of lit bulbs
+- [x] [Product of Array](https://leetcode.com/problems/product-of-array-except-self/)
+	- First pass assign prefix value to output array, second pass multiple output array values by suffix
+- [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+	- use set and only start checking sequence if we are at the start of a sequence
+- [ ] [Subsequence Target Sum](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
+	- Can sort the list even though its subsequence because answers will still be the same, only with order different (since were only accounting for min and max)
+	- left start at 0, right start at end. keep decrementing right until barely meets requirements.
+	- min is compulsory, hence sum 2^(r-l) instead of 2^(r-l+1) then increment left
+- [x] [Find Duplicate (Bounded)](https://leetcode.com/problems/find-the-duplicate-number/)
+	- Floyd's tortoise and hare. 
+	- Need a second slow pointer to move along with previous slow ptr to find the start of the cycle (after first slow and fast meet)
+- [ ] [Partition Array](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)
+	- one pass keeping track of left_partition's max and max_so_far
+- [ ] [Candy Distribution](https://leetcode.com/problems/candy/)
+	- Left to right pass then right to left pass then get max
+- [ ] [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/ "https://leetcode.com/problems/continuous-subarray-sum/")
+	- prefix sum
+	- Check for same %
+	- Edge cases for 0s
+- [ ] [Subarray Target Sum](https://leetcode.com/problems/subarray-sum-equals-k/)
+	- prefix sum
+	- base case {0: count_1}
+- [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/ "https://leetcode.com/problems/maximum-subarray/")
+---
+### String
+- [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+	- use sorted string as hash key
+- [x] [Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+	- hash map and compare matches
+- [x] [Longest Substring without Duplicates](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+	- two pointer with dictionary
+	- remember to "remove (not account for)" all previous characters when l is advanced
+- [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+- [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+	- hash map and compare matches
+---
+### (Monotonic) Stack/Queue
+- [x] [Simplify Path](https://leetcode.com/problems/simplify-path/)
+	- use stack lol
+- [ ] [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
+	- for every char, while char is lexsmaller than previous char and previous char can appear at a later index, then remove previous char
+	- remember to keep track of visited chars
+- [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/ "https://leetcode.com/problems/daily-temperatures/")
+- [x] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+	- Determine a way to traverse each area
+	- Use a stack and keep appending for increasing rectangle height
+- [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+	- two pointer, start and end
+	- move whicever is smaller
+- [x] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+	- Monotonic stack
+- [ ] [Maximum Score of Good Subarray](https://leetcode.com/problems/maximum-score-of-a-good-subarray/)
+	- extension of largest rectangle in histogram
+- [ ] [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
+	- extension of largest rectangle in histogram
+- [x] [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+	- Monotonic Dequeue that stores index of elements
+	- maximum is always at head
+- [ ] [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/ "https://leetcode.com/problems/sum-of-subarray-minimums/")
+- [ ] [Minimum Number of K bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/)
+---
+### Greedy
+- [ ] [Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)
+	- simulation
+	- if can pop then pop, else push
+- [ ] [Partition Labels](https://leetcode.com/problems/partition-labels/)
+	- greedy partition based on the last index where each character appears at 
+- [x] [Jump Game](https://leetcode.com/problems/jump-game/)
+	- slowly push goal post towards the front from the back if cell is reachable the check if first cell is the goal
+- [x] [Jump Game 2](https://leetcode.com/problems/jump-game-ii/)
+	- Increment max step by max step instead of cell by cell
+---
+### Data Structures
+- [x] [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+	- two stacks, one of it is aux and only takes from the other stack if its empty for pop and peek operation
+- [ ] [Design Hashmap](https://leetcode.com/problems/design-hashmap/)
+- [ ] [Design Hashset](https://leetcode.com/problems/design-hashset/)
+- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/)
+	- take care when removing node and node is head
+	- use aux as dummy tail
+- [ ] [Design Circle dequeue](https://leetcode.com/problems/design-circular-deque/)
+- [ ] [Insert Delete GetRandom](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+---
+### Heap
+- [x] [Median Finder](https://leetcode.com/problems/find-median-from-data-stream/)
+	- One mean heap, one max heap, take care of making sure no elements in the lower heap is larger than the smallest elements in the upper heap
+- [ ] [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/)
+	- Sort in descending order
+---
+### Traversal
+- [x] [Meeting Rooms 2](https://www.lintcode.com/problem/919/)
+	- Start and End at different array and use 2 pointers to traverse both together. add count when start, decrease when end
+- [x] [Insert Interval](https://leetcode.com/problems/insert-interval/)
+	- Narrow down to 3 cases: if interval already passed, if interval has not arrived, if overlapping (carry forward the interval)
+- [x] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+	- peel like onion
+- [ ] [Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
+	- can use stack
+	- or can do O(1) space solution by determining direction and starting point based on the index sum at each iteration since diagonal index sum are unique
+---
+### Other
+- [x] [Count Number of Primes](https://leetcode.com/problems/count-primes/)
+	- Sieve of Eratosthenes
+	- only need to do p up to sqrt(n)
+- [x] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+	- Can do 3 pass for row, col and boxes
+	- Can also do 1 pass with set storing everything (i, item), (item, j), (i//3, j//3, item)
+- [ ] [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+	- case for digit, +- and both paranthesis
+	- Greedy One Pass, use stack to save running result and new expression's sign
+- [ ] [Adding Two Binary](https://leetcode.com/problems/adding-two-negabinary-numbers/)
+	- just need to determine the what the resulting bit and carry of each possible bitwise sum is
+	- {0: (0, 0), 1:(1, 0), 2:{0, -1}, -1:{0, 1}, 3:{1, -1}}
+	- continue calculation if arrays are exhausted but carry remains
+	- then remove leading zeros
+- [ ] [Text Justification](https://leetcode.com/problems/text-justification/)
+	- Used Recursion to calculate the spaces between words
+---
+### Disjoint Sets
+- [x] [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+	- Disjoint Sets
+- [ ] [Minimize Malware Spread](https://leetcode.com/problems/minimize-malware-spread/)
+	- Union Find and make sure answer is unique in its root
+---
+### Special
+- [ ] [Next Greater Element 3](https://leetcode.com/problems/next-greater-element-iii/)
+	- swap then sort
+- [ ] [Next Permutation](https://leetcode.com/problems/next-permutation/ "https://leetcode.com/problems/next-permutation/")
+	- Same as Next Greater Element 3
+- [x] [Happy Number](https://leetcode.com/problems/happy-number/)
+	- Can use Set
+	- Even better to use Floyd's Tortoise and Hare
+- [ ] [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
+	- O(n^2) with 3 pointers
+- [ ] [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/)
+	- one hasmap to store +1 and -1
+- [ ] [Next Smallest Palindrome](https://www.geeksforgeeks.org/given-a-number-find-next-smallest-palindrome-larger-than-this-number/)
+	- l, r pointer scan outwards from the middle
+	- handle all 9's seperately
+---
+### Dynamic Programming
+- [x] [Maximal Square](https://leetcode.com/problems/maximal-square/)
+- [x] [Coin Change](https://leetcode.com/problems/coin-change/)
+- [x] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+	- O(n^2) DP        *or*
+	- Greedy with bisect_left
+- [x] [Number of LIS](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
+	- LIS but with count
+- [x] [Unique Paths 2](https://leetcode.com/problems/unique-paths-ii/)
+- [x] [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+	- two pass in different direction
+	- keep track of left and right count and reset when one is more than the other depending on pass direction
+	- Alternative: dp solution
+- [x] [Longest Palindromic substring](https://leetcode.com/problems/longest-palindromic-substring/)
+	- same as palindromic substring
+- [x] [01-matrix](https://leetcode.com/problems/01-matrix/)
+	- forward pass + backward pass
+- [x] [Coin Change 2](https://leetcode.com/problems/coin-change-ii/)
+- [x] [Decode Ways](https://leetcode.com/problems/decode-ways/ "https://leetcode.com/problems/decode-ways/")
+- [x] [Best Time to Buy and Sell Stock 4](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/ "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/")
+	- damn hard
+- [x] [Longest Increasing Path](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+	- dfs with matrix caching
+---
+### Discussion
+- [Binary Search](https://leetcode.com/discuss/general-discussion/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems)
+- [Bounded Knapsack](https://leetcode.com/discuss/study-guide/1152328/01-Knapsack-Problem-and-Dynamic-Programming)
+- [ ] [Longest Value Path](https://leetcode.com/discuss/interview-question/algorithms/277534/Google-Largest-Value-Path-in-a-Directed-graph/268142)
+	- dicussion
+---
+### Unsolved
+- [ ] [Maximum Fruit Harvested After at Most K Steps](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/)
