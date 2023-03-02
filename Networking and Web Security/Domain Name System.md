@@ -8,7 +8,7 @@ A server that holds the DNS resource records. It is usually the final source of 
 ### *DNS Lookup Chain and Process*
 Client -> DNS Recursive Resolver -> TLD nameserver -> Authoritative nameserver
 1) User types in domain name in browser.
-2) If the IP address for this domain does not exist in the browser cache or the OS cache, the query travels into Internet and resolved by DNS Recursive Resolver.
+2) If the IP address for this domain does not exist in the browser cache or the OS cache, the query travels into Internet and resolved by DNS Recursive Resolver(router).
 3) DNS Recursive Resolver checks if the IP exists in cache, if not, it queries the DNS root nameserver.
 4) The root nameserver then responds to the resolver the address of the TLD DNS server (.com, .net) which stores the information of its domains.
 5) The resolver then makes a request to the .com TLD server(for example).
