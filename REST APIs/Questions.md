@@ -114,3 +114,28 @@
 - REST APIs are designed to not depend on previous API calls, thus stateless
 
 ## What is the difference between idempotent and safe HTTP methods
+- An idempotent method is a method that can be called numerous times but will still return the same response
+- A safe method is one that does not change the resource, meaning it may read but not write. For example, a GET request
+
+## Caching in a RESTful architecture
+- Client may request same data from the REST API many times, its beneficial for the response to be cached
+- Less bandwidth would be needed and the client may retrieve data faster
+- Each REST API contains specific metadata related to the caching of responses
+- For example, the headers of cache control and expires specify what responses may be cached by whom, and for how long
+
+## Best practices in developing a RESTful web service
+- Supporting JSON data transfer
+- Using proper status codes
+- Using URI hiearchy to represent the relationship of resources
+- Using idempotent HTTP methods
+- Using caching
+- Incorporate security measures
+
+## When should pass values in endpoint in slash manner/query parameters or request body
+- Pass values in endpoint in slash manner when we are identifying a certain resource or collection of resource
+	- /books/123   (books with ID 123)
+- Pass values in endpoint's query parameters when the fields are optional and unrelated to the resource's data
+	- /books?status=active&sort_by=name (status and sort_by does not affect the books collection, its just optional to define the retrieved data)
+- Pass values in request body when creating or updating a resource
+	- /books (POST, create books with bookName,bookType in request body)
+	- /books/123 (PUT, update books with ID 123 with bookName, bookType in request body)
