@@ -72,7 +72,7 @@
 - PATCH alters only specified data of an existing resource
 
 ## What is the payload in the context of REST API?
-- Paylod refers to data that has been transferred through the REST API
+- Payload refers to data that has been transferred through the REST API
 - If client makes GET request to server, server will provide a response with the paylod
 - A client may also provide payload in a POST request, where the client is giving data to the server
 
@@ -93,7 +93,7 @@
 - Request Body
 	- Contains the content data being sent
 
-## What are the core components of an HTTP request?
+## What are the core components of an HTTP response?
 - Status Code
 	- Provides information about success or failure of request
 	- 200 codes indicate success
