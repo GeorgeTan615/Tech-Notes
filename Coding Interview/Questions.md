@@ -46,7 +46,7 @@
 	- iterative constant space.
 	- Dont need queue because binary tree is perfect
 	- curr assume it is already connected to nodes in the same level and is responsible for connecting all the nodes in the level below
-- [ ] [Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)
+- [x] [Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)
 	- left depends on curr and curr depends on right
 	- if no right subtree, then curr should add parent directly
 	- else curr should recurse the right subtree and since the right subtree would be correct already, curr should add x where x is (right->left->left->...->x->None)
@@ -87,7 +87,7 @@
 	- keep track of left count and right count while backtracking and choosing to add "(" or ")" according to the counts
 - [x] [N Queens](https://leetcode.com/problems/n-queens/)
 - [x] [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
-- [ ] [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/)
+- [x] [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/)
 	- backtracking by appending 0 - 9 at the end of each x, "appending" as in x * 10 + i
 - [x] [Combination Sum](https://leetcode.com/problems/combination-sum/)
 	- backtracking
