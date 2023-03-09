@@ -38,7 +38,7 @@
 - SOAP is a stricter and more niche alternative to REST, used where more regulated and stateful data has to be transferred
 
 ## Differences between REST and AJAX (Asynchronous JavaScript and XML)
-- AJAX is a collection of web technolgoies that allow for asynchronous web applications using the built in XML, HTTP request object.
+- AJAX is a collection of web technologies that allow for asynchronous web applications using the built in XML, HTTP request object.
 - REST represents the architecture to handling HTTP requests, AJAX refers to a collection of web technologies for making asynchronous web requests.
 - REST API may handle AJAX clients, AJAX may be used to send RESTful requests, but a REST API could never be implemented or replaced by AJAX
 
