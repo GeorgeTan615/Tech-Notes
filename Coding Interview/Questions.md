@@ -54,7 +54,7 @@
 	- Pop from preorder or postorder, then find seperator to divide left and right subtree
 - [x] [Binary Tree from Inorder and Postorder](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 - [x] [Binary Tree from Preorder and Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-- [ ] [Vertical Order Traversal](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
+- [x] [Vertical Order Traversal](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 	- Coordinates let x be column y be row.
 	- map coordinate to list of value
 	- sort coordinates in map and append to output list
