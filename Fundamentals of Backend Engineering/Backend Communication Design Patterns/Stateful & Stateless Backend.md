@@ -15,7 +15,7 @@
 - The protocols can be designed to store state
 - TCP is stateful
 	- Sequences, Connection file descriptor
-- UDP is stateless
+- UDPgi is stateless
 	- DNS send queryID in UDP to identify queries
 	- QUIC sends connectionID to identify connection
 

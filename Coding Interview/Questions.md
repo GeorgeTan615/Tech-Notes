@@ -93,7 +93,7 @@
 	- backtracking
 - [x] [Generate Permutation](https://leetcode.com/problems/permutations/)
 - [x] [Generate Subsets](https://leetcode.com/problems/subsets/)
-- [ ] [Frog Jump](https://leetcode.com/problems/frog-jump/)
+- [x] [Frog Jump](https://leetcode.com/problems/frog-jump/)
 	- breadth first search
 - [x] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 	- double backtracking
@@ -115,11 +115,11 @@
 - [ ]  [24 Game](https://leetcode.com/problems/24-game/)
 ---
 ### Binary Search
-- [ ] [First Bad Version](https://leetcode.com/problems/first-bad-version/)
+- [x] [First Bad Version](https://leetcode.com/problems/first-bad-version/)
 - [x] [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
 - [ ] [Closest Subsequence Sum](https://leetcode.com/problems/closest-subsequence-sum/)
 	- meet in the middle & binary search
-- [ ] [K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
+- [x] [K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
 	- range binary search
 	- cannot use abs because of case [1,1,2,2,2,2,2,3,3], x - arr[mid] > arr[mid+k] - x
 - [x] [First and Last Position in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
@@ -127,7 +127,7 @@
 	- check if mid is in left sorted portion or right sorted portion, or perfectly sorted
 ---
 ### Sorting
-- [ ] [Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
+- [x] [Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
 	- counting sort
 - [x] [Kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - [x] [Top K Frequent Element](https://leetcode.com/problems/top-k-frequent-elements/)
@@ -142,18 +142,18 @@
 	- sliding window classic
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
 - [x] [Two Sum Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-- [x] [3 Sum](https://leetcode.com/problems/3sum/)
+- [ ] [3 Sum](https://leetcode.com/problems/3sum/)
 	- Best case is O(n^2).
 	- avoid duplicates by shifting *a* pointer until it is different from prev num
 	- avoid duplicates by shifting left pointer after match until it is different from prev left_num
-- [ ] [Binary String Prefix Alignment](https://leetcode.com/problems/number-of-times-binary-string-is-prefix-aligned/)
+- [x] [Binary String Prefix Alignment](https://leetcode.com/problems/number-of-times-binary-string-is-prefix-aligned/)
 	- number of lit bulbs
 	- keep track of number of bulbs lit vs upper limit of lit bulbs
 - [x] [Product of Array](https://leetcode.com/problems/product-of-array-except-self/)
 	- First pass assign prefix value to output array, second pass multiple output array values by suffix
 - [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 	- use set and only start checking sequence if we are at the start of a sequence
-- [ ] [Subsequence Target Sum](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
+- [x] [Subsequence Target Sum](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
 	- Can sort the list even though its subsequence because answers will still be the same, only with order different (since were only accounting for min and max)
 	- left start at 0, right start at end. keep decrementing right until barely meets requirements.
 	- min is compulsory, hence sum 2^(r-l) instead of 2^(r-l+1) then increment left
@@ -164,11 +164,11 @@
 	- one pass keeping track of left_partition's max and max_so_far
 - [ ] [Candy Distribution](https://leetcode.com/problems/candy/)
 	- Left to right pass then right to left pass then get max
-- [ ] [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/ "https://leetcode.com/problems/continuous-subarray-sum/")
+- [x] [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/ "https://leetcode.com/problems/continuous-subarray-sum/")
 	- prefix sum
 	- Check for same %
 	- Edge cases for 0s
-- [ ] [Subarray Target Sum](https://leetcode.com/problems/subarray-sum-equals-k/)
+- [x] [Subarray Target Sum](https://leetcode.com/problems/subarray-sum-equals-k/)
 	- prefix sum
 	- base case {0: count_1}
 - [x] [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/ "https://leetcode.com/problems/maximum-subarray/")
@@ -188,7 +188,7 @@
 ### (Monotonic) Stack/Queue
 - [x] [Simplify Path](https://leetcode.com/problems/simplify-path/)
 	- use stack lol
-- [ ] [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
+- [x] [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
 	- for every char, while char is lexsmaller than previous char and previous char can appear at a later index, then remove previous char
 	- remember to keep track of visited chars
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/ "https://leetcode.com/problems/daily-temperatures/")
