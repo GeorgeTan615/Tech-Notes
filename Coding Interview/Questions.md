@@ -109,7 +109,7 @@
 	- also need to make sure that player 2 makes their optimal choice by ensuring that player 2 chooses the minimum of the score
 - [x] [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
 	- dfs with memo
-- [ ] [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+- [x] [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
 	- create k buckets
 	- try each number at all positions in the bucket
 - [ ]  [24 Game](https://leetcode.com/problems/24-game/)
@@ -142,7 +142,7 @@
 	- sliding window classic
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
 - [x] [Two Sum Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-- [ ] [3 Sum](https://leetcode.com/problems/3sum/)
+- [x] [3 Sum](https://leetcode.com/problems/3sum/)
 	- Best case is O(n^2).
 	- avoid duplicates by shifting *a* pointer until it is different from prev num
 	- avoid duplicates by shifting left pointer after match until it is different from prev left_num
@@ -162,7 +162,7 @@
 	- Need a second slow pointer to move along with previous slow ptr to find the start of the cycle (after first slow and fast meet)
 - [ ] [Partition Array](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)
 	- one pass keeping track of left_partition's max and max_so_far
-- [ ] [Candy Distribution](https://leetcode.com/problems/candy/)
+- [x] [Candy Distribution](https://leetcode.com/problems/candy/)
 	- Left to right pass then right to left pass then get max
 - [x] [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/ "https://leetcode.com/problems/continuous-subarray-sum/")
 	- prefix sum
@@ -185,7 +185,7 @@
 - [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 	- hash map and compare matches
 ---
-### (Monotonic) Stack/Queue
+### (Monotonic) Stack/Queue 
 - [x] [Simplify Path](https://leetcode.com/problems/simplify-path/)
 	- use stack lol
 - [x] [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
@@ -208,13 +208,13 @@
 	- Monotonic Dequeue that stores index of elements
 	- maximum is always at head
 - [ ] [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/ "https://leetcode.com/problems/sum-of-subarray-minimums/")
-- [ ] [Minimum Number of K bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/)
+- [x] [Minimum Number of K bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/)
 ---
 ### Greedy
-- [ ] [Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)
+- [x] [Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)
 	- simulation
 	- if can pop then pop, else push
-- [ ] [Partition Labels](https://leetcode.com/problems/partition-labels/)
+- [x] [Partition Labels](https://leetcode.com/problems/partition-labels/)
 	- greedy partition based on the last index where each character appears at 
 - [x] [Jump Game](https://leetcode.com/problems/jump-game/)
 	- slowly push goal post towards the front from the back if cell is reachable the check if first cell is the goal
@@ -226,7 +226,7 @@
 	- two stacks, one of it is aux and only takes from the other stack if its empty for pop and peek operation
 - [ ] [Design Hashmap](https://leetcode.com/problems/design-hashmap/)
 - [ ] [Design Hashset](https://leetcode.com/problems/design-hashset/)
-- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/)
+- [x] [LRU Cache](https://leetcode.com/problems/lru-cache/)
 	- take care when removing node and node is head
 	- use aux as dummy tail
 - [ ] [Design Circle dequeue](https://leetcode.com/problems/design-circular-deque/)
@@ -245,7 +245,7 @@
 	- Narrow down to 3 cases: if interval already passed, if interval has not arrived, if overlapping (carry forward the interval)
 - [x] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 	- peel like onion
-- [ ] [Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
+- [x] [Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 	- can use stack
 	- or can do O(1) space solution by determining direction and starting point based on the index sum at each iteration since diagonal index sum are unique
 ---

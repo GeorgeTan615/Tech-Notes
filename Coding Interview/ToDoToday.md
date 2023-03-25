@@ -1,3 +1,0 @@
-- [ ] Alien Dictionary
-- [ ] Word Search ii ?
-- [ ] Fabian's ques
