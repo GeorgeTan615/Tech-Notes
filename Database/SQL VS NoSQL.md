@@ -68,4 +68,14 @@ Availability - data is available when needed <br/>
 - Schemaless, lacks standardization of data types
 - No normalization, database engines are not as good at optimizing queries
 - Larger data storage, lack of normalization leads to more duplicated data stored. But is a relatively small drawback as storage is cheap
-- 
+
+## When to use SQL
+- Working with complex queries
+- ACID transactions are important
+- Data is highly structured and does not change frequently
+
+## When to use NoSQL
+- Unstructured data
+- Faster development speed
+- Priority is easy scalability and availability
+- Priority is not data consistency and integrity
