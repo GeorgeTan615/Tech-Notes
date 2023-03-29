@@ -14,13 +14,6 @@
  - WebRTC
  - Computer games (interactive games that exchange small messages and losses can be recovered)
 
- ## Multiplexing and demultiplexing
- - IP address targets host only
- - Hosts may run many apps each with different requirements
- - Ports now identify the "app" or "process", like how you can specify which port your app or server run on, e.g. "localhost:8080"
- - Sender multiplexes all its apps into UDP
- - Receiver demultiplex UDP datagrams to each app 
-
 ## UDP Datagram
 - UDP Header is 8 bytes only (IPv4)
 - Datagram slides into an IP packet as "data"
@@ -40,3 +33,23 @@
 - Uses less bandwidth
 - Stateless, consumes less memory as no state is stored in the server/client
 - Low latency - no handshake, order, retransmission or guaranteed delivery
+
+## Cons
+- No acknowledgment (never really know if the thing that has been sent has been successfully delivered)
+- No guarantee delivery (therefore low latency)
+- Connection-less, anyone can send data without prior knowledge (no handshakes like TCP)(imagine a DNS attack where change the source IP to a victim and the victim gets flooded with dns responses)
+- No flow control (no clue if the target can handle the data)
+- No congestion control 
+- No ordered packets
+- Security - can be easily spoofed (anyone can send the packet and the receiver must process it at a cost, can easily DoS, denial of service, the machine)
+
+
+
+
+
+ ## Multiplexing and demultiplexing
+ - IP address targets host only
+ - Hosts may run many apps each with different requirements
+ - Ports now identify the "app" or "process", like how you can specify which port your app or server run on, e.g. "localhost:8080"
+ - Sender multiplexes all its apps into UDP
+ - Receiver demultiplex UDP datagrams to each app 
