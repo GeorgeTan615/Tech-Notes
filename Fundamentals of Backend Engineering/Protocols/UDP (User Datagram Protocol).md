@@ -43,10 +43,6 @@
 - No ordered packets
 - Security - can be easily spoofed (anyone can send the packet and the receiver must process it at a cost, can easily DoS, denial of service, the machine)
 
-
-
-
-
  ## Multiplexing and demultiplexing
  - IP address targets host only
  - Hosts may run many apps each with different requirements
