@@ -56,7 +56,7 @@
 - Simpler to deal with layers 5-6-7 as just one layer, application
 - TCP/IP model does just that 
 
-TCP/IP Model
+## TCP/IP Model
 - Application (layer 5,6,7)
 - Transport (layer 4)
 - Internet (layer 3)
