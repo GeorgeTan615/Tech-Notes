@@ -1,7 +1,7 @@
 ## TLS (Transport Layer Security)
 Used to establish a secure connection on top of TCP connection. An important concept is you can't encrypt something with public key and decrypt it with public key, same goes for private key. So if encrypt with public, need to decrypt with private.
-
-## TLS with RSA (1.3)
+There are two key exchange algorithms, RSA and Diffie Hellman.
+## TLS with RSA (1.2)
 ![RSA](https://cdn.discordapp.com/attachments/776828668386213908/1095399788322754651/image.png)
 1. Client sends client hello, server sends hello back with a certificate attached with server's public key
 2. Client generates symmetric key and encrypts it using server's public key, then sends this encrypted key to server
