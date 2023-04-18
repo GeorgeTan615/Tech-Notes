@@ -1,5 +1,5 @@
 ## What are Relational databases
-Data is organized in tables, where columns are attributes and rows represent records
+Data is organized in tables, where columns are attributes and rows represent records.
 
 ## What are NoSQL databases
 A database data is stored in a non-relational structure, thus its schemaless and avoids joins. Due to its scalability, high performance and flexible nature, its popularity is rising in Big data and real time applications.
